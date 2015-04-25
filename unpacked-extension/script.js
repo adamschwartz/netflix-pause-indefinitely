@@ -1,6 +1,15 @@
 (function(){
+  var timedOut = false;
   var isTimedOut = function() {
-    return document.body.innerText.indexOf('Whoops') >= 0 && document.body.innerText.indexOf('Playback Timed Out') >= 0;
+    if (timedOut === true) {
+      return timedOut;
+    }
+
+    if (document.body.innerText.indexOf('Whoops') >= 0 && document.body.innerText.indexOf('Playback Timed Out') >= 0) {
+      return timedOut = true;
+    }
+
+    return false;
   };
 
   var refreshIfTimedOut = function() {
