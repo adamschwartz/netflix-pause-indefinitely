@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Kill Netflix Timeouts",
-    "description": "Because Netflix doesn’t know how to pause videos.",
-    "version": "1.0",
+    "name": "Pause Indefinitely for Netflix",
+    "description": "Pause Netflix for as long as you want without getting Playback Timeout errors.",
+    "version": "1.1",
     "content_scripts": [{
         "js": ["contentscript.js"],
         "matches": ["*://www.netflix.com/WiPlayer*"]
@@ -13,6 +13,7 @@
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
-        "128": "icons/icon128.png"
+        "128": "icons/icon128.png",
+        "256": "icons/icon256.png"
     }
 }
